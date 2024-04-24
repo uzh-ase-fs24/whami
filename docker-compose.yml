@@ -1,4 +1,5 @@
 version: "3.8"
+name: findme
 services:
   localstack:
     container_name: "localstack-main"
