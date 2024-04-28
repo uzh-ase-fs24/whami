@@ -44,7 +44,19 @@ After cloning this repository run `python scripts/initialize_project.py` this wi
 
 ## Running the application
 
-For pycharm users the run configurations are already set up. use `start:findme:local` to launch both frontend and
-backend.
+The findMe application is designed and built as a cloud native application. To run the application locally we use docker
+and docker compose.
+By running `docker compose up --build` from the root directory of this workspace the application will be started
+locally. After the initial build you can use `docker compose up` to start the application.
+However, this will not include any changes made to the backend repository since the last build.
 
-Alternatively, the findme application can be started locally by running `docker compose up` from this root directory.
+Our docker compose defines the following services:
+
+```yaml
+  - localstack-main # emulates AWS services for local development
+  - serverless # used to deploy the AWS services to localstack (shuts down after successful execution)
+  - frontend # mounted frontend code, serves the frontend on localhost:8100
+```
+
+After the serverless container has stopped the application is ready and accessible on http://localhost:8100, use chrome
+and its mobile view that can be activated in the dev tools to simulate a mobile device.
