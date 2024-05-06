@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://github.com/uzh-ase-fs24" target="_blank">
+    <img alt="findme-logo" height="150" src="https://github.com/uzh-ase-fs24/workspace/wiki/logos/findMe_square_solid.png"/>
+  </a>
+</p>
+
 # findMe development Workspace 🤖
 
 ## Quick Access Links
